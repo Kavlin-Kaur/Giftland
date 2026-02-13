@@ -2,16 +2,18 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full bg-cover bg-center overflow-hidden himachali-border-bottom"
+      className="relative h-screen w-full bg-cover bg-center overflow-hidden himachali-border-bottom bg-gradient-to-b from-red-900 via-amber-900 to-yellow-900"
       style={{
         backgroundImage:
-          'url(https://images.unsplash.com/photo-1599917753413-310d9dcf1313?w=1400&h=1200&fit=crop)',
+          'url(https://images.unsplash.com/photo-1615568135662-0ff6d606203f?w=1400&h=1200&fit=crop)',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       {/* Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/55 to-black/65"></div>
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
