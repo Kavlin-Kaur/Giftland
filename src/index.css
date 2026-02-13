@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #C41E3A;
+  --color-primary-dark: #8B1538;
+  --color-cream: #FFF8E7;
+  --color-ink: #2c2c2c;
+  --color-muted: #5a5a5a;
+  --color-himachali-red: #C41E3A;
+  --color-himachali-orange: #E67E22;
+  --color-himachali-maroon: #7D1935;
+  --color-himachali-gold: #D4AF37;
+  --color-himachali-cream: #F5F1E3;
+  
+  --font-family-serif: 'Playfair Display', serif;
+  --font-family-sans: 'Poppins', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-primary text-white rounded-sm font-medium transition-all duration-300 hover:bg-primary-dark transform hover:scale-105;
+  }
+
+  .card-shadow {
+    @apply shadow-lg hover:shadow-2xl transition-all duration-300;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/20;
+  }
+
+  /* Himachali Pattern Borders */
+  .himachali-border-top {
+    border-top: 6px solid;
+    border-image: repeating-linear-gradient(
+      90deg,
+      #C41E3A 0px, #C41E3A 15px,
+      #E67E22 15px, #E67E22 30px,
+      #7D1935 30px, #7D1935 45px,
+      #D4AF37 45px, #D4AF37 60px
+    ) 1;
+  }
+
+  .himachali-border-bottom {
+    border-bottom: 6px solid;
+    border-image: repeating-linear-gradient(
+      90deg,
+      #C41E3A 0px, #C41E3A 15px,
+      #E67E22 15px, #E67E22 30px,
+      #7D1935 30px, #7D1935 45px,
+      #D4AF37 45px, #D4AF37 60px
+    ) 1;
+  }
+
+  .himachali-pattern-bg {
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 10px,
+        rgba(196, 30, 58, 0.05) 10px,
+        rgba(196, 30, 58, 0.05) 20px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 10px,
+        rgba(230, 126, 34, 0.05) 10px,
+        rgba(230, 126, 34, 0.05) 20px
+      );
+  }
+
+  .geometric-border {
+    position: relative;
+  }
+
+  .geometric-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      #C41E3A 0px, #C41E3A 8px,
+      #D4AF37 8px, #D4AF37 16px,
+      #E67E22 16px, #E67E22 24px,
+      #7D1935 24px, #7D1935 32px
+    );
+  }
+
+  .geometric-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      #7D1935 0px, #7D1935 8px,
+      #E67E22 8px, #E67E22 16px,
+      #D4AF37 16px, #D4AF37 24px,
+      #C41E3A 24px, #C41E3A 32px
+    );
+  }
+}
