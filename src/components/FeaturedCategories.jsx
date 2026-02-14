@@ -3,17 +3,20 @@ export default function FeaturedCategories() {
     {
       id: 1,
       name: "Women's Shawls",
-      image: 'https://images.unsplash.com/photo-1530099387789-4c1017266635?w=500&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1615568135662-0ff6d606203f?w=500&h=600&fit=crop',
+      description: 'Elegant handcrafted shawls',
     },
     {
       id: 2,
       name: 'Scarves & Stoles',
-      image: 'https://images.unsplash.com/photo-1582142905397-bc5328bd9ba9?w=500&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1599917753413-310d9dcf1313?w=500&h=600&fit=crop',
+      description: 'Versatile and stylish',
     },
     {
       id: 3,
       name: 'Luxury Collection',
-      image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1585695159474-c3fb1176b13f?w=500&h=600&fit=crop',
+      description: 'Premium artisan pieces',
     },
   ];
 
