@@ -9,6 +9,7 @@ import SweatersPage from './pages/SweatersPage';
 import PoonchuPage from './pages/PoonchuPage';
 import AboutPage from './pages/AboutPage';
 import NewsletterPage from './pages/NewsletterPage';
+import BlogPage from './pages/BlogPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/poonchu" element={<PoonchuPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/newsletter" element={<NewsletterPage />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
         <Footer />
       </div>

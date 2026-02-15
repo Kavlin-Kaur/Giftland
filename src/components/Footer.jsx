@@ -64,9 +64,9 @@ export default function Footer() {
             <h4 className="font-serif font-bold text-ink mb-4 text-sm uppercase tracking-wide">Company</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/about" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
@@ -79,9 +79,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/blog" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
