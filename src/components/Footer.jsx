@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,20 +24,12 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="font-serif font-bold text-ink mb-4 text-sm uppercase tracking-wide">Newsletter</h4>
             <p className="text-muted text-sm mb-4">Get new arrivals and artisan stories.</p>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 bg-white rounded-sm border border-primary/10 p-2">
-              <div className="flex items-center gap-2 flex-1 min-w-0">
-                <Mail size={16} className="text-muted shrink-0" />
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full bg-transparent text-sm outline-none text-ink placeholder:text-muted"
-                  aria-label="Email address"
-                />
-              </div>
-              <button className="bg-primary text-white text-xs font-semibold px-3 py-2 rounded-sm hover:bg-primary-dark transition w-full sm:w-auto">
-                Subscribe
-              </button>
-            </div>
+            <Link
+              to="/newsletter"
+              className="inline-block bg-primary text-white px-4 py-2 text-sm font-semibold rounded-sm hover:bg-primary-dark transition"
+            >
+              Subscribe Now →
+            </Link>
           </div>
 
           {/* Shop */}
