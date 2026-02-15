@@ -74,9 +74,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/sustainability" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   Sustainability
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-muted text-sm hover:text-primary transition-colors duration-300">
@@ -152,7 +152,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <p className="text-muted text-xs text-center sm:text-right">
-              &copy; {currentYear} TriJas. All rights reserved. | 
+              &copy; {currentYear} TriJas. All rights reserved. |
               <a href="#" className="hover:text-primary transition-colors duration-300 ml-2">
                 Privacy Policy
               </a>

@@ -24,16 +24,16 @@ export default function Hero() {
               Heritage Meets Elegance
             </span>
           </div>
-          
+
           <h1 className="text-white font-serif text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
             Timeless Drapes. Modern Grace.
           </h1>
 
           <p className="text-white/95 text-base sm:text-lg mb-2 font-light max-w-2xl mx-auto drop-shadow-md">
-            Discover handcrafted Himachali shawls and scarves that blend traditional textile heritage 
+            Discover handcrafted Himachali shawls and scarves that blend traditional textile heritage
             with contemporary elegance.
           </p>
-          
+
           <p className="text-white/85 text-sm sm:text-base mb-8 max-w-2xl mx-auto drop-shadow-md">
             Each piece tells a story of craftsmanship and tradition, woven with pride in the heart of Himalayas.
           </p>

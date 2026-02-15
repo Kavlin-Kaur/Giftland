@@ -19,7 +19,7 @@ export default function Navbar() {
     // Check system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDarkMode(prefersDark);
-    
+
     // Apply theme
     if (prefersDark) {
       document.documentElement.classList.add('dark');
@@ -53,9 +53,9 @@ export default function Navbar() {
             >
               Home
             </Link>
-            
+
             {/* Shop Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsShopOpen(true)}
               onMouseLeave={() => setIsShopOpen(false)}
@@ -66,18 +66,17 @@ export default function Navbar() {
                 Shop
                 <ChevronDown size={16} className={`transition-transform duration-200 ${isShopOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isShopOpen && (
                 <div className={`absolute top-full left-0 mt-2 w-48 rounded-lg shadow-xl overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                   {shopCategories.map((category) => (
                     <Link
                       key={category.path}
                       to={category.path}
-                      className={`block px-4 py-3 text-sm transition-colors duration-200 ${
-                        isDarkMode 
-                          ? 'text-white hover:bg-himachali-orange hover:text-white' 
+                      className={`block px-4 py-3 text-sm transition-colors duration-200 ${isDarkMode
+                          ? 'text-white hover:bg-himachali-orange hover:text-white'
                           : 'text-ink hover:bg-himachali-orange/10'
-                      }`}
+                        }`}
                     >
                       {category.name}
                     </Link>
@@ -102,7 +101,7 @@ export default function Navbar() {
 
           {/* Cart Icon & Dark Mode Toggle */}
           <div className="flex items-center space-x-4">
-            <button 
+            <button
               onClick={toggleDarkMode}
               className={`p-2 rounded-lg transition-colors duration-300 ${isDarkMode ? 'bg-white/20 text-yellow-300' : 'bg-primary/10 text-primary'} hover:bg-primary/20`}
             >

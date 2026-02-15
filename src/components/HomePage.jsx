@@ -5,13 +5,13 @@ import Stories from './Stories';
 import WhyChooseTriJas from './WhyChooseTriJas';
 
 export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <FeaturedCategories />
-      <BestSellers />
-      <Stories />
-      <WhyChooseTriJas />
-    </>
-  );
+    return (
+        <>
+            <Hero />
+            <FeaturedCategories />
+            <BestSellers />
+            <Stories />
+            <WhyChooseTriJas />
+        </>
+    );
 }

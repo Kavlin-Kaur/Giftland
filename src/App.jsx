@@ -1,3 +1,8 @@
+Support
+Contact Us
+Shipping Info
+Returns & Exchange
+FAQs
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -10,6 +15,7 @@ import PoonchuPage from './pages/PoonchuPage';
 import AboutPage from './pages/AboutPage';
 import NewsletterPage from './pages/NewsletterPage';
 import BlogPage from './pages/BlogPage';
+import SustainabilityPage from './pages/SustainabilityPage';
 
 function App() {
   return (
@@ -25,6 +31,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/newsletter" element={<NewsletterPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/sustainability" element={<SustainabilityPage />} />
         </Routes>
         <Footer />
       </div>
