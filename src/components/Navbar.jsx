@@ -86,12 +86,12 @@ export default function Navbar() {
               )}
             </div>
 
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
             >
               About
-            </a>
+            </Link>
             <a
               href="#contact"
               className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
