@@ -29,7 +29,7 @@ export default function SustainabilityPage() {
       icon: <Mountain size={28} />,
       title: 'Himalayan Wool',
       stat: '100% Mountain-Sourced',
-      description: 'Our wool comes from free-grazing sheep and goats in Himachal Pradesh's high-altitude pastures. These animals graze on natural grasses, producing the finest, warmest fibers without industrial farming.',
+      description: 'Our wool comes from free-grazing sheep and goats in Himachal Pradesh\'s high-altitude pastures. These animals graze on natural grasses, producing the finest, warmest fibers without industrial farming.',
       color: 'himachali-maroon',
     },
     {
