@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react';
-import { ShoppingBag, Menu, X, Moon, Sun } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ShoppingBag, Menu, X, Moon, Sun, ChevronDown } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isShopOpen, setIsShopOpen] = useState(false);
 
-  const links = ['Home', 'Shop', 'About', 'Contact'];
+  const shopCategories = [
+    { name: 'Shawls', path: '/shawls' },
+    { name: 'Suits', path: '/suits' },
+    { name: 'Sweaters', path: '/sweaters' },
+    { name: 'Poonchu', path: '/poonchu' },
+  ];
 
   useEffect(() => {
     // Check system preference
@@ -33,22 +40,64 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3">
+          <Link to="/" className="flex-shrink-0 flex items-center gap-3">
             <Logo isDark={isDarkMode} />
             <h1 className={`text-2xl font-serif font-bold ${isDarkMode ? 'text-white' : 'text-ink'}`}>TriJas</h1>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {links.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
+            <Link
+              to="/"
+              className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
+            >
+              Home
+            </Link>
+            
+            {/* Shop Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsShopOpen(true)}
+              onMouseLeave={() => setIsShopOpen(false)}
+            >
+              <button
+                className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 flex items-center gap-1 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
               >
-                {link}
-              </a>
-            ))}
+                Shop
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isShopOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isShopOpen && (
+                <div className={`absolute top-full left-0 mt-2 w-48 rounded-lg shadow-xl overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+                  {shopCategories.map((category) => (
+                    <Link
+                      key={category.path}
+                      to={category.path}
+                      className={`block px-4 py-3 text-sm transition-colors duration-200 ${
+                        isDarkMode 
+                          ? 'text-white hover:bg-himachali-orange hover:text-white' 
+                          : 'text-ink hover:bg-himachali-orange/10'
+                      }`}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <a
+              href="#about"
+              className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
+            >
+              About
+            </a>
+            <a
+              href="#contact"
+              className={`font-medium text-sm hover:text-himachali-orange transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink'}`}
+            >
+              Contact
+            </a>
           </div>
 
           {/* Cart Icon & Dark Mode Toggle */}
@@ -79,16 +128,40 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className={`md:hidden pb-4 border-t transition-colors duration-300 ${isDarkMode ? 'border-white/20' : 'border-primary/10'}`}>
-            {links.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className={`block py-2 transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink hover:text-primary'}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link}
-              </a>
-            ))}
+            <Link
+              to="/"
+              className={`block py-2 transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink hover:text-primary'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <div className="py-2">
+              <div className={`font-medium text-sm mb-2 ${isDarkMode ? 'text-white' : 'text-ink'}`}>Shop</div>
+              {shopCategories.map((category) => (
+                <Link
+                  key={category.path}
+                  to={category.path}
+                  className={`block py-2 pl-4 text-sm transition-colors duration-300 ${isDarkMode ? 'text-white/80 hover:text-himachali-orange' : 'text-muted hover:text-primary'}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {category.name}
+                </Link>
+              ))}
+            </div>
+            <a
+              href="#about"
+              className={`block py-2 transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink hover:text-primary'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </a>
+            <a
+              href="#contact"
+              className={`block py-2 transition-colors duration-300 ${isDarkMode ? 'text-white hover:text-himachali-orange' : 'text-ink hover:text-primary'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </a>
           </div>
         )}
       </div>

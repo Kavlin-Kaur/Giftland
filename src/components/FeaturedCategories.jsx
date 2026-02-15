@@ -1,22 +1,27 @@
+import { Link } from 'react-router-dom';
+
 export default function FeaturedCategories() {
   const categories = [
     {
       id: 1,
-      name: "Women's Shawls",
+      name: "Shawls",
       image: 'https://images.unsplash.com/photo-1615568135662-0ff6d606203f?w=500&h=600&fit=crop',
       description: 'Elegant handcrafted shawls',
+      link: '/shawls',
     },
     {
       id: 2,
-      name: 'Scarves & Stoles',
-      image: 'https://images.unsplash.com/photo-1599917753413-310d9dcf1313?w=500&h=600&fit=crop',
-      description: 'Versatile and stylish',
+      name: 'Suits',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&h=600&fit=crop',
+      description: 'Traditional & stylish suits',
+      link: '/suits',
     },
     {
       id: 3,
-      name: 'Luxury Collection',
-      image: 'https://images.unsplash.com/photo-1585695159474-c3fb1176b13f?w=500&h=600&fit=crop',
-      description: 'Premium artisan pieces',
+      name: 'Sweaters',
+      image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&h=600&fit=crop',
+      description: 'Cozy winter warmth',
+      link: '/sweaters',
     },
   ];
 
@@ -36,9 +41,10 @@ export default function FeaturedCategories() {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {categories.map((category) => (
-            <div
+            <Link
               key={category.id}
-              className="relative h-96 overflow-hidden rounded-lg card-shadow group cursor-pointer"
+              to={category.link}
+              className="relative h-96 overflow-hidden rounded-lg card-shadow group cursor-pointer block"
             >
               {/* Image */}
               <img
@@ -51,12 +57,13 @@ export default function FeaturedCategories() {
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
 
               {/* Content */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-white font-serif text-2xl sm:text-3xl font-bold text-center px-4">
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <h3 className="text-white font-serif text-2xl sm:text-3xl font-bold text-center px-4 mb-2">
                   {category.name}
                 </h3>
+                <p className="text-white/90 text-sm">{category.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
