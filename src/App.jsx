@@ -1,8 +1,3 @@
-Support
-Contact Us
-Shipping Info
-Returns & Exchange
-FAQs
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -16,6 +11,11 @@ import AboutPage from './pages/AboutPage';
 import NewsletterPage from './pages/NewsletterPage';
 import BlogPage from './pages/BlogPage';
 import SustainabilityPage from './pages/SustainabilityPage';
+import OurStoryPage from './pages/OurStoryPage';
+import ContactPage from './pages/ContactPage';
+import ShippingPage from './pages/ShippingPage';
+import ReturnsPage from './pages/ReturnsPage';
+import FAQPage from './pages/FAQPage';
 
 function App() {
   return (
@@ -29,9 +29,14 @@ function App() {
           <Route path="/sweaters" element={<SweatersPage />} />
           <Route path="/poonchu" element={<PoonchuPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/our-story" element={<OurStoryPage />} />
           <Route path="/newsletter" element={<NewsletterPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/shipping" element={<ShippingPage />} />
+          <Route path="/returns" element={<ReturnsPage />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
         <Footer />
       </div>

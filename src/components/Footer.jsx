@@ -69,9 +69,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/our-story" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   Our Story
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/sustainability" className="text-muted text-sm hover:text-primary transition-colors duration-300">
@@ -91,24 +91,24 @@ export default function Footer() {
             <h4 className="font-serif font-bold text-ink mb-4 text-sm uppercase tracking-wide">Support</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/contact" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/shipping" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   Shipping Info
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/returns" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   Returns & Exchange
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                <Link to="/faq" className="text-muted text-sm hover:text-primary transition-colors duration-300">
                   FAQs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
