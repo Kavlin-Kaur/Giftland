@@ -1,15 +1,16 @@
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-cream to-gray-100 himachali-border-top">
+    <footer className="bg-linear-to-b from-cream to-gray-100 himachali-border-top">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-xl font-serif font-bold text-ink mb-4">TriJas</h3>
             <p className="text-muted text-sm mb-4">
               Tradition, Texture, and Timeless Elegance.
@@ -19,29 +20,49 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Newsletter */}
+          <div className="lg:col-span-2">
+            <h4 className="font-serif font-bold text-ink mb-4 text-sm uppercase tracking-wide">Newsletter</h4>
+            <p className="text-muted text-sm mb-4">Get new arrivals and artisan stories.</p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 bg-white rounded-sm border border-primary/10 p-2">
+              <div className="flex items-center gap-2 flex-1 min-w-0">
+                <Mail size={16} className="text-muted shrink-0" />
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="w-full bg-transparent text-sm outline-none text-ink placeholder:text-muted"
+                  aria-label="Email address"
+                />
+              </div>
+              <button className="bg-primary text-white text-xs font-semibold px-3 py-2 rounded-sm hover:bg-primary-dark transition w-full sm:w-auto">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
           {/* Shop */}
           <div>
             <h4 className="font-serif font-bold text-ink mb-4 text-sm uppercase tracking-wide">Shop</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
-                  Women's Shawls
-                </a>
+                <Link to="/shawls" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                  Shawls
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
-                  Scarves & Stoles
-                </a>
+                <Link to="/suits" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                  Suits
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
-                  Luxury Collection
-                </a>
+                <Link to="/sweaters" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                  Sweaters
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted text-sm hover:text-primary transition-colors duration-300">
-                  Sale
-                </a>
+                <Link to="/poonchu" className="text-muted text-sm hover:text-primary transition-colors duration-300">
+                  Poonchu
+                </Link>
               </li>
             </ul>
           </div>

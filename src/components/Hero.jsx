@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full bg-cover bg-center overflow-hidden himachali-border-bottom bg-gradient-to-b from-red-900 via-amber-900 to-yellow-900"
+      className="relative h-screen w-full bg-cover bg-center overflow-hidden himachali-border-bottom bg-linear-to-b from-red-900 via-amber-900 to-yellow-900 hero-bg"
       style={{
         backgroundImage:
           'url(https://images.unsplash.com/photo-1615568135662-0ff6d606203f?w=1400&h=1200&fit=crop)',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}
     >
       {/* Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/55 to-black/65"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/45 via-black/55 to-black/65"></div>
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <div className="mb-6 animate-fade-in">
             <span className="inline-block px-4 py-2 bg-himachali-red/80 text-white rounded-full text-sm font-semibold mb-4">
               Heritage Meets Elegance
@@ -38,12 +39,27 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary inline-block hover:shadow-xl">
+            <Link to="/shawls" className="btn-primary inline-block hover:shadow-xl">
               Shop Collection
-            </button>
-            <button className="px-8 py-3 bg-white/20 backdrop-blur-sm text-white rounded-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/50">
-              Learn More
-            </button>
+            </Link>
+            <Link to="/suits" className="btn-secondary">
+              Explore Suits
+            </Link>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-white/90">
+            <div className="glass-card rounded-lg px-4 py-3">
+              <p className="text-xs uppercase tracking-widest text-white/70">Weavers</p>
+              <p className="text-lg font-semibold">120+ Artisans</p>
+            </div>
+            <div className="glass-card rounded-lg px-4 py-3">
+              <p className="text-xs uppercase tracking-widest text-white/70">Heritage</p>
+              <p className="text-lg font-semibold">50+ Years</p>
+            </div>
+            <div className="glass-card rounded-lg px-4 py-3">
+              <p className="text-xs uppercase tracking-widest text-white/70">Shipping</p>
+              <p className="text-lg font-semibold">Worldwide</p>
+            </div>
           </div>
         </div>
       </div>

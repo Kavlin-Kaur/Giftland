@@ -23,10 +23,17 @@ export default function FeaturedCategories() {
       description: 'Cozy winter warmth',
       link: '/sweaters',
     },
+    {
+      id: 4,
+      name: 'Poonchu',
+      image: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=500&h=600&fit=crop',
+      description: 'Traditional Himalayan wraps',
+      link: '/poonchu',
+    },
   ];
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-cream geometric-border">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-cream geometric-border himachali-pattern-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -39,12 +46,12 @@ export default function FeaturedCategories() {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {categories.map((category) => (
             <Link
               key={category.id}
               to={category.link}
-              className="relative h-96 overflow-hidden rounded-lg card-shadow group cursor-pointer block"
+              className="relative h-72 sm:h-80 lg:h-96 overflow-hidden rounded-lg card-shadow group cursor-pointer block"
             >
               {/* Image */}
               <img

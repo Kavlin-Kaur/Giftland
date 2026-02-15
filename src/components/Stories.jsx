@@ -95,7 +95,7 @@ export default function Stories() {
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           {/* Story Display */}
           <div className="flex-1 relative">
-            <div className="relative h-screen max-h-96 sm:max-h-[500px] lg:max-h-[600px] bg-black rounded-lg overflow-hidden group">
+            <div className="relative h-[70vh] sm:h-[80vh] lg:h-screen max-h-96 sm:max-h-125 lg:max-h-150 bg-black rounded-lg overflow-hidden group">
               {/* Progress Bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-white/20 z-20">
                 <div
@@ -111,13 +111,13 @@ export default function Stories() {
                 className="w-full h-full object-cover"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/60" />
 
               {/* Story Content */}
               <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
                 {/* Header */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-himachali-red to-himachali-orange flex items-center justify-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-linear-to-r from-himachali-red to-himachali-orange flex items-center justify-center">
                     <span className="text-white text-sm font-bold">T</span>
                   </div>
                   <div>
@@ -131,7 +131,7 @@ export default function Stories() {
 
                 {/* Content */}
                 <div className="text-white">
-                  <span className="inline-block bg-gradient-to-r from-himachali-red to-himachali-orange text-white px-3 py-1 rounded-full text-xs font-bold mb-4">
+                  <span className="inline-block bg-linear-to-r from-himachali-red to-himachali-orange text-white px-3 py-1 rounded-full text-xs font-bold mb-4">
                     {story.tag}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-serif font-bold mb-2 text-white">
@@ -143,7 +143,7 @@ export default function Stories() {
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-2xl font-bold text-himachali-gold">{story.price}</span>
                   </div>
-                  <button className="bg-gradient-to-r from-himachali-red to-himachali-orange text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition transform hover:scale-105 text-sm sm:text-base">
+                  <button className="bg-linear-to-r from-himachali-red to-himachali-orange text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition transform hover:scale-105 text-sm sm:text-base">
                     Shop Now
                   </button>
                 </div>
@@ -204,7 +204,7 @@ export default function Stories() {
                     alt={stry.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
                     <p className="font-semibold text-sm line-clamp-2">{stry.title}</p>
                     <p className="text-himachali-gold text-xs font-bold mt-1">{stry.price}</p>

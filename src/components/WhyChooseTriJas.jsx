@@ -23,7 +23,7 @@ export default function WhyChooseTriJas() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-cream geometric-border">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-cream geometric-border himachali-pattern-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -38,10 +38,10 @@ export default function WhyChooseTriJas() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature) => (
-            <div key={feature.id} className="text-center">
+            <div key={feature.id} className="text-center bg-white rounded-lg p-6 card-shadow">
               {/* Icon */}
               <div className="flex justify-center mb-6">
-                <div className="p-4 bg-white rounded-full shadow-md">
+                <div className="p-4 bg-cream rounded-full shadow-md">
                   {feature.icon}
                 </div>
               </div>
@@ -57,6 +57,21 @@ export default function WhyChooseTriJas() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div className="bg-white rounded-lg p-4 shadow-md">
+            <p className="text-xs uppercase tracking-widest text-muted">Craft</p>
+            <p className="text-lg font-semibold text-ink">Handwoven in HP</p>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-md">
+            <p className="text-xs uppercase tracking-widest text-muted">Care</p>
+            <p className="text-lg font-semibold text-ink">Ethical Sourcing</p>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-md">
+            <p className="text-xs uppercase tracking-widest text-muted">Support</p>
+            <p className="text-lg font-semibold text-ink">24/7 Assistance</p>
+          </div>
         </div>
       </div>
     </section>

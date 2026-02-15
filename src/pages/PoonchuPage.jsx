@@ -95,7 +95,7 @@ export default function PoonchuPage() {
   return (
     <div className="min-h-screen bg-cream pt-24 pb-16">
       {/* Hero Banner */}
-      <div className="relative h-64 bg-gradient-to-r from-himachali-maroon via-himachali-red to-himachali-orange mb-12">
+      <div className="relative h-64 bg-linear-to-r from-himachali-maroon via-himachali-red to-himachali-orange mb-12">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="text-4xl sm:text-5xl font-serif font-bold mb-4">Himachali Poonchu</h1>

@@ -44,8 +44,26 @@
     @apply px-8 py-3 bg-primary text-white rounded-sm font-medium transition-all duration-300 hover:bg-primary-dark transform hover:scale-105;
   }
 
+  .btn-secondary {
+    @apply px-8 py-3 bg-white/15 text-white rounded-sm font-medium transition-all duration-300 border border-white/40 hover:bg-white/25;
+  }
+
   .card-shadow {
     @apply shadow-lg hover:shadow-2xl transition-all duration-300;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .hero-bg {
+    background-attachment: fixed;
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      background-attachment: scroll;
+    }
   }
 
   .hero-overlay {
